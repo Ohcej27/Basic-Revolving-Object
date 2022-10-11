@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #181818;
+}
+
+.box{
+	width: 500px;
+	height: 500px;
+	border-radius: 10px;
+	border: 2px solid #fff;
+	box-shadow: 0px 0px 20px #fff;
+	box-shadow: inset 0px 0px 20px gray;
+	background: #fff;
+	margin: 30px auto;
+}
+
+img.bgbox{
+	width:500px;
+	height: 500px;
+	border-radius: 10px;
+	position: absolute;
+}
+
+.box2{
+	width: 300px;
+	margin: 30px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+button{
+	height: 100px;
+	width: 100px;
+	cursor: pointer;
+	margin-right: 20px;
+	border-radius: 10px;
+	box-shadow: 16px 14px 20px #000;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} 
+
+button.start::before{
+	content:"";
+	background-image: conic-gradient(green 20deg, transparent 120deg );
+	width: 150%;
+	height: 150%;
+	position: absolute;
+	animation: rotate 2s linear infinite;
+}
+
+button.start::after{
+	content: "Start";
+	width: 90px;
+	height: 90px;
+	background: #101010;
+	position: absolute;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 25px;
+	letter-spacing: 5px;
+	box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+button.stop::before{
+	content:"";
+	background-image: conic-gradient(#ff0052 20deg, transparent 120deg );
+	width: 150%;
+	height: 150%;
+	position: absolute;
+	animation: rotate 2s linear infinite;
+}
+
+button.stop::after{
+	content: "Stop";
+	width: 90px;
+	height: 90px;
+	background: #101010;
+	position: absolute;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 25px;
+	letter-spacing: 5px;
+	box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+@keyframes rotate {
+	0%{
+		transform: rotate(0deg);
+	}
+	 100% {
+		 transform: rotate(-360deg);
+	 }
+}
+		
+
+#startbtn {
+	background-color: #101010;
+}
+
+#stopbtn {
+	background-color: #101010;
+}
+
+#monoLogo {
+	Position: relative;
+	top: 0;
+	left: 0;
+	animation: moving 5s linear infinite;
+	animation-play-state: paused;
+	
+	
+}
+img.logo{
+	height: 80px;
+	width: 80px;
+}
+@keyframes moving{
+	
+	0%{
+		top: 0;
+		left: 0;
+	}
+	
+	25%{
+		top: 0;
+		left: 420px;
+	}
+	
+	50%{
+		top: 420px;
+		left: 420px;
+	}
+	75%{
+		top: 420px;
+		left: 0px;
+	}
+	100%{
+		top: 0;
+		left: 0;
+	}
+}
+
+p {
+	position: relative;
+	margin: 30px 10px 0px 0px;
+	text-align: right;
+	color: #fff;
+	font-style: italic;
+}
+	
